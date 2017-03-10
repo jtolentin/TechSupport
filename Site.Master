@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.Master.cs" Inherits="Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page-wrap">
+     <form id="Form1" runat="server"> 
+      
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <div id="banner"><a id="A9" class="navbar-brand" runat="server" href="~/Home.aspx">COMP2139</a></div>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a id="A10" runat="server" href="~/Home.aspx">Home</a></li>
+                        <li><a id="A11" runat="server" href="~/Customers.aspx">Customers</a></li>
+                        <li><a id="A12" runat="server" href="~/Surveys.aspx">Surveys</a></li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="#" data-toggle="dropdown">Maintenance<b class="caret"></b></a>
+                                <div class="dropdown-content">
+                                    <a href="ProductsAdmin.aspx">Products</a>
+                                    <a href="CustomersAdmin.aspx">Customers</a>
+                                </div>
+                        </li>
+                         <li><a id="A13" runat="server" href="~/Contacts.aspx">Contact</a></li>
+                    </ul>                 
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Content -->
+       
+        <!-- Body Content -->
+        <div class="container body-content">
+           <div class="cornersbody">
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder2"  runat="server"></asp:ContentPlaceHolder>
+
+           </div>
+            <footer id="foot">
+                 <p>
+                    &copy; <%: DateTime.Now.Year %> - COMP2139 - SportsPro V 2.0
+                </p>
+            </footer>
+        </div>
+
+    </form>
+    </div>
+</body>
+</html>
+
